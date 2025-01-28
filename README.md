@@ -27,6 +27,12 @@ You can install the necessary libraries using `pip`:
 pip install -r requirements.txt
 ```
 
+Install tool in /usr/bin withc `bash` (Not Tested Properly):
+
+```bash
+bash install.sh
+```
+
 ### Arguments
 
 - `URL`: The target URL (e.g., `http://example.com`)
