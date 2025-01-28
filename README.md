@@ -27,10 +27,6 @@ You can install the necessary libraries using `pip`:
 pip install -r requirements.txt
 ```
 
-## Stop Word Customization
-
-The script uses a set of default stop words to filter out common words (e.g., "the", "and", "or"). You can customize this list by creating a blacklist.txt file in the same directory as the script. Each line of the file should contain one stop word. If the blacklist.txt file is not found, the script will fall back to the default stop words.
-
 ### Arguments
 
 - `URL`: The target URL (e.g., `http://example.com`)
@@ -48,3 +44,8 @@ The script uses a set of default stop words to filter out common words (e.g., "t
 - `-o`, `--output`: The filename to save the generated wordlist (default is `wordlist.txt`). This option allows you to specify the name of the file where the wordlist will be saved.
 
 - `-i`, `--interactive`: Enable interactive mode. When this option is used, you will be prompted to enter the necessary settings (URL, depth, word length, etc.) interactively rather than providing them through command-line arguments.
+
+
+## Stop Word Customization
+
+The script uses a set of default stop words to filter out common words (e.g., "the", "and", "or"). You can customize this list by creating a blacklist.txt file in the same directory as the script. Each line of the file should contain one stop word. If the blacklist.txt file is not found, the script will fall back to the default stop words.
