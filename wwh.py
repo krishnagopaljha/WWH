@@ -26,7 +26,7 @@ logo = """
 print(logo)
 
 
-class PyCEWL:
+class WWH:
     def __init__(self, url, depth=2, min_word_length=5, max_words=None, verbose=False, threads=1):
         self.url = url
         self.depth = depth
@@ -162,7 +162,7 @@ def format_url(url):
 
 # Main function
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="PyCEWL - Custom Word List Generator")
+    parser = argparse.ArgumentParser(description="WWH - Custom Word List Generator")
     parser.add_argument("url", nargs="?", help="Target URL (e.g., http://example.com)")
     parser.add_argument("-d", "--depth", type=int, default=2, help="Spidering depth (default is 2)")
     parser.add_argument("-m", "--min-word-length", type=int, default=5, help="Minimum word length (default is 5)")
@@ -176,7 +176,7 @@ if __name__ == "__main__":
 
     # Interactive mode
     if args.interactive or not args.url:
-        print("\033[1;36m=== PyCEWL - Interactive Mode ===\033[1;m")
+        print("\033[1;36m=== WWH - Interactive Mode ===\033[1;m")
         args.url = input("\033[1;33mEnter the target URL (e.g., testphp.vulnweb.com): \033[1;m").strip()
         args.url = format_url(args.url)
         args.depth = int(input("\033[1;33mEnter the spidering depth (default is 2): \033[1;m") or 2)
@@ -191,7 +191,7 @@ if __name__ == "__main__":
     if args.url:
         args.url = format_url(args.url)
 
-    pycewl = PyCEWL(
+    WWH = WWH(
         url=args.url,
         depth=args.depth,
         min_word_length=args.min_word_length,
@@ -200,4 +200,4 @@ if __name__ == "__main__":
         threads=args.threads
     )
     
-    pycewl.save_wordlist(args.output)
+    WWH.save_wordlist(args.output)
